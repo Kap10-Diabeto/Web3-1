@@ -9,6 +9,8 @@ let recept = {
         "Gnugga bären, ", "Steka kylpastan, ", "Smula muskottnöten, ", "Blanda, ", "Servera"
     ]
 }
+
+console.log(recept.title, recept.rating)
 //Tomt värde i print, functionen fyller på med varje index i arrayen
 var print = "";
 recept.ingredients.forEach(myFunction);
