@@ -12,7 +12,7 @@ let recept = {
 
 console.log(recept.title, recept.rating)
 //Tomt värde i print, functionen fyller på med varje index i arrayen
-var print = "";
+let print = "";
 recept.ingredients.forEach(myFunction);
 
 function myFunction(value){
@@ -22,7 +22,7 @@ return print;
 
 console.log(print);
 
-var print = "";
+print = "";
 recept.steps.forEach(myFunction);
 
 function myFunction(value){
