@@ -1,0 +1,44 @@
+body{
+    background-color: #FFD662;
+    max-width: 500px;
+    margin:auto;
+}
+
+@font-face{
+    font-family: karla;
+    src: url(Karla-Regular.ttf);
+}
+
+#year{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(161, 154, 49);
+    font-family: karla;
+
+}
+
+#week{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(161, 154, 49);
+    font-family: karla;
+}
+
+#meals{
+    text-align: justify;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: karla; 
+    color: rgb(85, 79, 0);
+    
+  }
+
+ul{
+    padding:0;
+}
+
+li{
+    padding-top: 20px;
+    list-style: none;
+}
+
