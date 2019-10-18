@@ -1,0 +1,62 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 4em;
+}
+
+ul{
+    background: #444;
+    color: salmon;
+    list-style: none;
+
+
+}
+
+.item{
+    border: 1px solid salmon;
+    padding: 2em;
+    padding: 2em;
+    margin: 5px;
+ 
+    transition: border-color .5s, border-left-width .5s, color .5s;;
+}
+
+.item:hover{
+    border-left-width: 15px;
+    color: pink;
+    border-color: pink;
+
+}
+
+.drpdnbtn{
+    color: white;
+    padding: 2em;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+
+}
+
+.content{
+display: none;
+position: absolute;
+background-color: springgreen;
+min-width: 300px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.content li{
+    color:white;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown:hover .content{
+    display: block;
+}
