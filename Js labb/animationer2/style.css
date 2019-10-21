@@ -1,7 +1,13 @@
+@font-face {
+    font-family: karla;
+    src: url(Karla-Regular.ttf);
+  }
 body{
     margin:0;
     padding: 0;
     background: #262626;
+    font-family: karla;
+
 
 }
 
@@ -14,9 +20,8 @@ a{
     height: 60px;
     text-align: center;
     line-height: 60px;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    font-size: 24px;
+    text-transform: uppercase; 
+    font-size: 30px;
     letter-spacing: 2px;
     color: #ffff;
     text-decoration: none;
@@ -39,12 +44,13 @@ a svg rect{
     transition: .4s;
     stroke-dasharray: 500,500;
     stroke-dashoffset: 0;
+    cursor: default;
 }
 
 .dropdown:hover svg rect{
     stroke-dashoffset: 100;
     stroke-dasharray: 100,280;
-    stroke: yellow;
+    stroke:rgb(255, 217, 0);
 }
 
 
@@ -56,20 +62,19 @@ a svg rect{
     text-align: left;
     margin-left: 10px;
     line-height: 35px;
-    font-family: sans-serif;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 2px;
     color: #ffff;
     text-decoration: none;
     transition: border-color .5s, border-left-width .5s, color .5s;
 }
 
-
+/*Lägga till så att elementen flyter ner*/
 .item:hover{
     border-left-width: 15px;
-    color:yellow;
-    border-left-color: yellow;
+    color:rgb(255, 217, 0);
+    border-left-color: rgb(255, 217, 0);
 
 }
 
@@ -98,6 +103,7 @@ min-width: 300px;
     padding: 12px 16px;
     padding-left:55px;
     display: block;
+    cursor: pointer
 }
 
 .dropdown:hover .content{
@@ -109,7 +115,7 @@ main{
 }
 .Glower{
     position: relative;
-    margin-left: 400px;
+    margin-left: 680px;
     display: block;
     margin-top: 400px;
     padding: 0;
@@ -130,14 +136,61 @@ main{
     transition: .5s;
 }
 .Glower li:hover{
-    background: #fff;
-    box-shadow: 0 0 10px rgba(255,255,255,1),
-                0 0 20px rgba(255,255,255,1),
-                0 0 30px rgba(255,255,255,1),
-                0 0 0 75px rgba(255,255,255,0.05),
-                0 0 0 60px rgba(255,255,255,0.05)
-                0 0 0 45px rgba(255,255,255,0.05),
-                0 0 0 30px rgba(255,255,255,0.05),
-                0 0 0 15px rgba(255,255,255,0.05);
+    cursor: pointer;
+    background:  #fff;
+    box-shadow: 0 0 10px rgb(255, 217, 0, 1),
+                0 0 20px rgba(255, 217, 0, 1),
+                0 0 30px rgba(255, 217, 0, 1),
+                0 0 0 75px rgba(255, 217, 0, 0.05),
+                0 0 0 60px rgba(255, 217, 0, 0.05),
+                0 0 0 45px rgba(255, 217, 0, 0.05),
+                0 0 0 30px rgba(255, 217, 0, 0.05),
+                0 0 0 15px rgba(255, 217, 0, 0.05);
                
+}
+
+.Outer{
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.containero{
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) ;
+    grid-template-rows: auto;
+    grid-gap: 0 40px;
+}
+
+.containero .box{
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+.contento{
+    position: relative;
+    padding: 20px;
+}
+
+.contento h2{
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 10em;
+    color: rgba(255,255,255, .05);
+    transition: 0.5s;
+}
+.box:hover .contento h2{
+    top: -10px;
 }
