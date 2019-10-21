@@ -129,7 +129,7 @@ main{
     color: #262626;
     transition: .5s;
 }
-ul li:hover{
+.Glower li:hover{
     background: #fff;
     box-shadow: 0 0 10px rgba(255,255,255,1),
                 0 0 20px rgba(255,255,255,1),
