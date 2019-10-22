@@ -11,7 +11,7 @@ body{
 
 }
 
-a{
+#Menu{
     position: relative;
     margin-left: 50px;
     margin-top: 50px;
@@ -27,6 +27,12 @@ a{
     text-decoration: none;
 
 }
+
+.gl{
+    color:white;
+    display: block;
+    text-decoration: none;
+} 
 
 a svg,
 a svg rect{
@@ -139,14 +145,14 @@ main{
     cursor: pointer;
     background:  #fff;
     box-shadow: 0 0 10px rgb(255, 217, 0, 1),
-                0 0 20px rgba(255, 217, 0, 1),
+                 0 0 20px rgba(255, 217, 0, 1),
                 0 0 30px rgba(255, 217, 0, 1),
                 0 0 0 75px rgba(255, 217, 0, 0.05),
                 0 0 0 60px rgba(255, 217, 0, 0.05),
                 0 0 0 45px rgba(255, 217, 0, 0.05),
                 0 0 0 30px rgba(255, 217, 0, 0.05),
                 0 0 0 15px rgba(255, 217, 0, 0.05);
-               
+                
 }
 
 .Outer{
@@ -156,6 +162,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-height: 100vh;
+position: relative;
 }
 
 .containero{
@@ -164,16 +171,56 @@ min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) ;
     grid-template-rows: auto;
-    grid-gap: 0 40px;
+    grid-gap: 0 160px;
 }
 
 .containero .box{
     position: relative;
     height: 400px;
     display: flex;
+    background: #262626;
     justify-content: center;
     align-items: center;
-    border: 1px solid #000;
+    border: 1px solid #262626;
+}
+
+.containero .box:before{
+     content: '';  
+    position: absolute;
+    top: -2px; 
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: rgb(255, 217, 0);
+    transform: skew(2deg,2deg);
+    z-index: -1; 
+}
+
+.containero .box:nth-child(1):before{
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.containero .box:nth-child(2):before{
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.containero .box:nth-child(3):before{
+    background: linear-gradient(315deg, #e91e63, #5d02dd);
+}
+
+.containero .box:nth-child(4):before{
+    background: linear-gradient(315deg, #ff0000, #ffc107);
+}
+
+.containero .box:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
 }
 
 .contento{
@@ -181,16 +228,61 @@ min-height: 100vh;
     padding: 20px;
 }
 
-.contento h2{
+.box .contento h2{
     position: absolute;
-    top: -60px;
+    top: -40px;
     right: 20px;
     margin: 0;
     padding: 0;
     font-size: 10em;
     color: rgba(255,255,255, .05);
     transition: 0.5s;
+    cursor: default;
 }
 .box:hover .contento h2{
-    top: -10px;
+    top: -110px;
 }
+
+.box .contento h3{
+margin: 0 0 10px;
+padding: 0;
+color: #FFF;
+font-weight: 500;
+}
+
+.box .contento p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.box .contento a {
+    position: relative;
+    margin: 0;
+    text-decoration: none;
+    border: 1px solid #fff;
+    font-size: 13px;
+    display: inline-block;
+    color: #FFF;
+    transition: .5s;
+    margin-top: 40px;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.box:hover .contento a{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.box .contento a:hover{
+    color: #262626;
+    background: #FFF;
+}
+
+
+
